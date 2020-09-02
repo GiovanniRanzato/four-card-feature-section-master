@@ -1,0 +1,112 @@
+/* GLOBAL STYLES */
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan:  hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-darkb-blue: hsl(234, 12%, 34%);
+    --grayish-blue:  hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --shadow: hsl(229, 6%, 66%, 0.25);
+}
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SHADOWS */
+.shadow{
+    -webkit-box-shadow: 0px 18px 20px 5px var(--very-darkb-blue);
+    -moz-box-shadow: 0px 18px 20px 5px var(--very-darkb-blue);
+    box-shadow: 0px 18px 20px 5px var(--very-darkb-blue);
+}
+
+/* Typography */
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--grayish-blue);
+    text-align: center;
+}
+.text-thin{
+    font-weight: 200;
+}
+.text-bold{
+    font-weight: 600;
+}
+
+.main-container{
+    min-height: 100vh;
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-flow: column;
+    padding:85px 30px 72px 30px;
+}
+.lead{
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 16px;
+}
+.title, .card-title{
+    font-weight: 600;
+    color: var(--very-darkb-blue);
+}
+.title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.card-title{
+    font-size: 20px;
+}
+.value{
+    padding: 8px;
+    margin-bottom:80px; 
+}
+
+/*  COLORS */
+.card{
+    font-size: 18px;
+    border-top: 4px solid;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    text-align: left;
+    -webkit-box-shadow: 0px 8px 20px 5px var(--shadow);
+    -moz-box-shadow: 0px 8px 20px 5px var(--shadow);
+    box-shadow: 0px 8px 20px 5px var(--shadow);
+}
+.card-body{
+    position: relative;
+    width: 100%;
+    min-height: 249px;
+    border-radius: 0 0 8px 8px;
+    background-color: var(--very-light-gray) ;
+    padding:30px;
+}
+.card-icon{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.card-decription{
+    max-height: 81px;
+    overflow: hidden;
+}
+
+
+.red{ border-color:var(--red) transparent transparent transparent }
+.cyan{ border-color:var(--cyan); }
+.orange{ border-color:var(--orange); }
+.blue{ border-color:var(--blue); }
+
+
+
+/* FOOTER ATTRIBUTION */
+footer {
+    padding: 16px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+.attribution a:hover { color: var(--very-darkb-blue) }
