@@ -46,32 +46,36 @@ body{
     padding:85px 30px 72px 30px;
 }
 .lead{
-    font-size: 24px;
+    
     font-weight: 200;
-    margin-bottom: 16px;
+    
 }
 .title, .card-title{
     font-weight: 600;
     color: var(--very-darkb-blue);
-}
-.title {
+    margin-bottom: 8px;
     font-size: 24px;
-    margin-bottom: 16px;
 }
+
 .card-title{
     font-size: 20px;
 }
 .value{
     padding: 8px;
-    margin-bottom:80px; 
+    margin-bottom:65px; 
 }
 
 /*  COLORS */
+.card-container{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto;
+}
+
 .card{
-    font-size: 18px;
+    font-size: 13px;
     border-top: 4px solid;
     border-radius: 8px;
-    margin-bottom: 24px;
     text-align: left;
     -webkit-box-shadow: 0px 8px 20px 5px var(--shadow);
     -moz-box-shadow: 0px 8px 20px 5px var(--shadow);
@@ -80,7 +84,7 @@ body{
 .card-body{
     position: relative;
     width: 100%;
-    min-height: 249px;
+    min-height: 225px;
     border-radius: 0 0 8px 8px;
     background-color: var(--very-light-gray) ;
     padding:30px;
@@ -110,3 +114,54 @@ footer {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
 .attribution a:hover { color: var(--very-darkb-blue) }
+
+/* RESPONSIVE DESIGN DESKTOP */
+
+@media only screen and (min-width: 900px){
+    .main-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title, .lead{
+        font-size:36px
+    }
+    .value{
+        max-width: 505px;
+    }
+
+    .card-container{
+        grid-template-columns: 350px 350px;
+    }
+    .card-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        max-width: 350px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .card-container{
+        grid-template-columns: 350px 350px 350px;
+    }
+    .card-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-wrapper:first-child{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .card-wrapper:last-child{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+    }
+    .card{
+        max-width: ;
+    }
+}
